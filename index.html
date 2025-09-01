@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAMIS SHOP - Premium Quality Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <!-- Main Landing Page -->
+    <div class="main-page" id="mainPage">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>QAMIS SHOP</h1>
+                <p>Premium Quality Products</p>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="auth-buttons">
+                <!-- Authentication removed -->
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover Amazing Products</h2>
+                <p>Find the best quality items at unbeatable prices</p>
+                <div class="search-container">
+                    <div class="search-bar" id="searchBar">
+                        <input type="text" placeholder="Search for products..." id="searchInput">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h3>المنتجات المميزة</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img id="productImage" src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400" alt="قميص">
+                    <h4>قميص</h4>
+                    
+                    <!-- Color Selection -->
+                    <div class="color-selection">
+                        <p>اختر اللون:</p>
+                        <div class="color-options">
+                            <button class="color-btn active" data-color="white" data-name="أبيض" style="background-color: #F5F5DC;"></button>
+                            <button class="color-btn" data-color="beige" data-name="بيج" style="background-color: #D2B48C;"></button>
+                            <button class="color-btn" data-color="black" data-name="أسود" style="background-color: #2C2C2C;"></button>
+                        </div>
+                    </div>
+                    
+                    <p class="price">2500DA</p>
+                    <button class="buy-btn" onclick="openPurchaseModal()">اشتري الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 QAMIS SHOP. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Search/Product Page (Hidden by default) -->
+    <div class="search-page" id="searchPage">
+        <div class="search-header">
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Search Products</h2>
+        </div>
+        
+        <div class="search-input-container">
+            <input type="text" placeholder="Type to search..." id="productSearchInput">
+            <button class="search-submit-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="products-container">
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400" alt="قميص أبيض">
+                <div class="product-info">
+                    <h4>قميص أبيض</h4>
+                    <p class="description">قميص عالي الجودة مع مميزات رائعة</p>
+                    <p class="price">2500DA</p>
+                    <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="قميص بيج">
+                <div class="product-info">
+                    <h4>قميص بيج</h4>
+                    <p class="description">قميص أنيق بلون بيج هادئ</p>
+                    <p class="price">2500DA</p>
+                    <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400" alt="قميص أسود">
+                <div class="product-info">
+                    <h4>قميص أسود</h4>
+                    <p class="description">قميص كلاسيكي باللون الأسود</p>
+                    <p class="price">2500DA</p>
+                    <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
