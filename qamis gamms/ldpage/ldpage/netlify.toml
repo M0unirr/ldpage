@@ -1,0 +1,23 @@
+# Netlify configuration file
+
+[build]
+  # This command installs the backend dependencies.
+  command = "npm install"
+  # This directory contains the frontend files.
+  publish = "."
+
+[functions]
+  # This specifies the directory where Netlify will look for serverless functions.
+  directory = "functions"
+
+[[redirects]]
+  # This rule rewrites all API requests to our serverless function.
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+
+[[redirects]]
+  # This rule handles client-side routing for the SPA.
+  from = "/*"
+  to = "/index.html"
+  status = 200
